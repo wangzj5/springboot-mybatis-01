@@ -2,7 +2,6 @@ package com.example.springbootmybatisdemo.controller;
 
 import com.example.springbootmybatisdemo.bean.User;
 import com.example.springbootmybatisdemo.service.UserService;
-import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
