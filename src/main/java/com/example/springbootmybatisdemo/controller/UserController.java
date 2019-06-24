@@ -18,7 +18,7 @@ public class UserController {
     @Autowired
     private UserService userService;
     //创建线程安全的hashmap
-    static Map<Long, User> userMap = Collections.synchronizedMap(new HashMap<Long,User>());
+    static Map<Long, User> userMap = Collections.synchronizedMap(new HashMap<>());
     @RequestMapping("getUser/{id}")
     public String GetUser(@PathVariable Long id){
 
