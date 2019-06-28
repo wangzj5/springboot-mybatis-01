@@ -1,6 +1,7 @@
 # springboot-mybatis-01
 springboot不是注解的方式整合mybatis，用的是mapper.xml文件中写sql语句的方式
 1、导包
+
  <dependencies>
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
@@ -48,7 +49,8 @@ springboot不是注解的方式整合mybatis，用的是mapper.xml文件中写sq
         </dependency>
         
         2、配置application.yml
-        spring:
+        
+spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost/blog?characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
@@ -68,7 +70,10 @@ logging:
         springbootmybatisdemo:
           bean: debug
           
+          
 3、写mapper文件
+
+
 <mapper namespace="com.example.springbootmybatisdemo.mapper.UserMapper">
 
     <resultMap id="BaseResultMap" type="com.example.springbootmybatisdemo.bean.User">
@@ -86,12 +91,16 @@ logging:
 <mapper/>
 
 4、写mapper接口
+
+
 @Repository
 public interface UserMapper {
     User getUserById(Long id);
 }
 
 5、启动类上记得扫描mapper接口所在
+
+
 @MapperScan("com.example.springbootmybatisdemo.mapper") //扫描的mapper
 @SpringBootApplication
 public class SpringbootMybatisDemoApplication {
