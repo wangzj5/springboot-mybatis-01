@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 public class UserService {
     @Autowired
     UserMapper userMapper;
+
     public User Sel(Long id){
         return userMapper.getUserById(id);
     }
